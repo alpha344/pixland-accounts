@@ -1,5 +1,5 @@
 services:
-  reearth-cerbos:
+  pixland-cerbos:
     image: cerbos/cerbos:0.40.0
     command: server --config=/policies/.cerbos.yaml
     ports:

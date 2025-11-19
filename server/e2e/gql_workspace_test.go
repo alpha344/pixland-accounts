@@ -13,8 +13,8 @@ import (
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/idx"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/idx"
+	"github.com/alpha344/pixlandx/rerror"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -132,7 +132,7 @@ func TestFindByID(t *testing.T) {
 	resp := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).
 		Expect().Status(http.StatusOK).
 		JSON().Object()
@@ -158,7 +158,7 @@ func TestCreateWorkspace(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object()
 	o.Value("data").Object().Value("createWorkspace").Object().Value("workspace").Object().Value("name").String().IsEqual("test")
 }
@@ -177,7 +177,7 @@ func TestDeleteWorkspace(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object()
 	o.Value("data").Object().Value("deleteWorkspace").Object().Value("workspaceId").String().IsEqual(wId.String())
 
@@ -203,7 +203,7 @@ func TestUpdateWorkspace(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object()
 	o.Value("data").Object().Value("updateWorkspace").Object().Value("workspace").Object().Value("name").String().IsEqual("updated")
 
@@ -230,7 +230,7 @@ func TestAddUsersToWorkspace(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK)
 
 	w, err = r.Workspace.FindByID(context.Background(), wId)
@@ -257,7 +257,7 @@ func TestRemoveUserFromWorkspace(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK)
 
 	w, err = r.Workspace.FindByID(context.Background(), wId)
@@ -282,7 +282,7 @@ func TestUpdateMemberOfWorkspace(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK)
 
 	w, err = r.Workspace.FindByID(context.Background(), wId2)
@@ -308,7 +308,7 @@ func TestAddIntegrationToWorkspace(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK)
 
 	w, err = r.Workspace.FindByID(context.Background(), wId)
@@ -335,7 +335,7 @@ func TestRemoveIntegrationFromWorkspace(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK)
 
 	w, err = r.Workspace.FindByID(context.Background(), wId)
@@ -360,7 +360,7 @@ func TestUpdateIntegrationOfWorkspace(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK)
 
 	w, err = r.Workspace.FindByID(context.Background(), wId)
@@ -382,7 +382,7 @@ func TestFindByUser(t *testing.T) {
 		o := e.POST("/api/graphql").
 			WithHeader("authorization", "Bearer test").
 			WithHeader("Content-Type", "application/json").
-			WithHeader("X-Reearth-Debug-User", uId.String()).
+			WithHeader("X-Pixland-Debug-User", uId.String()).
 			WithBytes(jsonData).
 			Expect().Status(http.StatusOK).
 			JSON().Object().
@@ -431,7 +431,7 @@ func TestFindByUser(t *testing.T) {
 		o := e.POST("/api/graphql").
 			WithHeader("authorization", "Bearer test").
 			WithHeader("Content-Type", "application/json").
-			WithHeader("X-Reearth-Debug-User", uId.String()).
+			WithHeader("X-Pixland-Debug-User", uId.String()).
 			WithBytes(jsonData).
 			Expect().Status(http.StatusOK).
 			JSON().Object().

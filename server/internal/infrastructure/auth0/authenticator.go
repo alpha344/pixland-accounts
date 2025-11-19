@@ -12,9 +12,9 @@ import (
 	"time"
 
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
-	"github.com/reearth/reearthx/i18n"
-	"github.com/reearth/reearthx/log"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/i18n"
+	"github.com/alpha344/pixlandx/log"
+	"github.com/alpha344/pixlandx/rerror"
 )
 
 type Auth0 struct {

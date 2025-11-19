@@ -12,13 +12,13 @@ import (
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/idx"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/idx"
+	"github.com/alpha344/pixlandx/rerror"
 	"github.com/stretchr/testify/assert"
 )
 
 func baseSeederOneUser(ctx context.Context, r *repo.Container) error {
-	auth := user.ReearthSub(uId.String())
+	auth := user.PixlandSub(uId.String())
 	metadata := user.NewMetadata()
 	metadata.LangFrom("ja")
 	metadata.SetTheme(user.ThemeDark)
@@ -54,7 +54,7 @@ func baseSeederOneUser(ctx context.Context, r *repo.Container) error {
 }
 
 func baseSeederUser(ctx context.Context, r *repo.Container) error {
-	auth := user.ReearthSub(uId.String())
+	auth := user.PixlandSub(uId.String())
 	metadata := user.NewMetadata()
 	metadata.LangFrom("ja")
 	metadata.SetTheme(user.ThemeDark)
@@ -139,7 +139,7 @@ func TestUpdateMe(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object().Value("data").Object().Value("updateMe").Object().Value("me").Object()
 	o.Value("name").String().IsEqual("updated")
 	o.Value("email").String().IsEqual("hoge@test.com")
@@ -152,9 +152,9 @@ func TestRemoveMyAuth(t *testing.T) {
 
 	u, err := r.User.FindByID(context.Background(), uId)
 	assert.Nil(t, err)
-	assert.Equal(t, &user.Auth{Provider: "reearth", Sub: "reearth|" + uId.String()}, u.Auths().GetByProvider("reearth"))
+	assert.Equal(t, &user.Auth{Provider: "pixland", Sub: "pixland|" + uId.String()}, u.Auths().GetByProvider("pixland"))
 
-	query := `mutation { removeMyAuth(input: {auth: "reearth"}){ me{ id name email metadata { lang theme } } }}`
+	query := `mutation { removeMyAuth(input: {auth: "pixland"}){ me{ id name email metadata { lang theme } } }}`
 	request := GraphQLRequest{
 		Query: query,
 	}
@@ -165,7 +165,7 @@ func TestRemoveMyAuth(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object()
 
 	u, err = r.User.FindByID(context.Background(), uId)
@@ -191,7 +191,7 @@ func TestDeleteMe(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object()
 
 	_, err = r.User.FindByID(context.Background(), uId)
@@ -211,7 +211,7 @@ func TestMe(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object().Value("data").Object().Value("me").Object()
 	o.Value("id").String().IsEqual(uId.String())
 	o.Value("name").String().IsEqual("e2e")
@@ -234,7 +234,7 @@ func TestUserByNameOrEmail(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object().Value("data").Object().Value("userByNameOrEmail").Object()
 	o.Value("id").String().IsEqual(uId.String())
 	o.Value("name").String().IsEqual("e2e")
@@ -254,7 +254,7 @@ func TestNode(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object().Value("data").Object().Value("node").Object()
 	o.Value("id").String().IsEqual(uId.String())
 }
@@ -272,7 +272,7 @@ func TestNodes(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object().Value("data").Object().Value("nodes")
 	o.Array().ConsistsOf(map[string]string{"id": uId.String()})
 }
@@ -312,7 +312,7 @@ func TestSignup(t *testing.T) {
 func TestSignupOIDC(t *testing.T) {
 	e, _ := StartServer(t, &app.Config{}, true, nil)
 	email := "testSignupOIDC@example.com"
-	auth := user.ReearthSub(uId.String())
+	auth := user.PixlandSub(uId.String())
 	query := `mutation($input: SignupOIDCInput!) {
 		signupOIDC(input: $input) {
 			user { id name email }
@@ -336,12 +336,12 @@ func TestSignupOIDC(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
-		WithHeader("X-Reearth-Debug-Auth-Sub", "oidc|1234567890").
-		WithHeader("X-Reearth-Debug-Auth-Iss", "https://issuer.example.com").
-		WithHeader("X-Reearth-Debug-Auth-Token", "dummy").
-		WithHeader("X-Reearth-Debug-Auth-Name", "new user").
-		WithHeader("X-Reearth-Debug-Auth-Email", email).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-Auth-Sub", "oidc|1234567890").
+		WithHeader("X-Pixland-Debug-Auth-Iss", "https://issuer.example.com").
+		WithHeader("X-Pixland-Debug-Auth-Token", "dummy").
+		WithHeader("X-Pixland-Debug-Auth-Name", "new user").
+		WithHeader("X-Pixland-Debug-Auth-Email", email).
 		WithBytes(jsonData).Expect().Status(http.StatusOK).JSON().Object().Value("data").Object().Value("signupOIDC").Object().Value("user").Object()
 	o.Value("id").String().NotEmpty()
 	o.Value("name").String().IsEqual("new user")
@@ -371,7 +371,7 @@ func TestVerifyUser(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData1).
 		Expect().Status(http.StatusOK).
 		JSON().Object().Value("data").Object().Value("createVerification").Boolean().IsTrue()
@@ -403,7 +403,7 @@ func TestVerifyUser(t *testing.T) {
 	o2 := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData2).
 		Expect().Status(http.StatusOK).
 		JSON().Object().Value("data").Object().Value("verifyUser").Object().Value("user").Object()
@@ -436,7 +436,7 @@ func TestPasswordReset(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(startBody).
 		Expect().Status(http.StatusOK).
 		JSON().Object().
@@ -472,7 +472,7 @@ func TestPasswordReset(t *testing.T) {
 	e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(resetBody).
 		Expect().Status(http.StatusOK).
 		JSON().Object().
@@ -487,6 +487,3 @@ func TestPasswordReset(t *testing.T) {
 	assert.NoError(t, err)
 	assert.True(t, ok, "password should be updated")
 }
-
-
-

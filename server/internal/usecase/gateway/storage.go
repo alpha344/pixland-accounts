@@ -4,7 +4,7 @@ package gateway
 import (
 	"context"
 
-	"github.com/reearth/reearthx/asset/domain/file"
+	"github.com/alpha344/pixlandx/asset/domain/file"
 )
 
 const (

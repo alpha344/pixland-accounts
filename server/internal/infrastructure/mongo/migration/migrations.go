@@ -2,7 +2,7 @@
 
 package migration
 
-import "github.com/reearth/reearthx/usecasex/migration"
+import "github.com/alpha344/pixlandx/usecasex/migration"
 
 // To add a new migration, run go run ./tools/cmd/migrategen migration_name
 

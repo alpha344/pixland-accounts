@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/util"
 	"github.com/stretchr/testify/assert"
 )
 

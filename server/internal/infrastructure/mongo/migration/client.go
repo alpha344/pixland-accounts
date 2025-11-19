@@ -7,12 +7,12 @@ import (
 
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/alpha344/pixland-accounts/server/pkg/config"
-	"github.com/reearth/reearthx/mongox"
-	"github.com/reearth/reearthx/usecasex/migration"
+	"github.com/alpha344/pixlandx/mongox"
+	"github.com/alpha344/pixlandx/usecasex/migration"
 )
 
 // To add a new migration, do the following command:
-// go run github.com/reearth/reearthx/tools migrategen -d internal/infrastructure/mongo/migration -t DBClient -n "FooBar"
+// go run github.com/alpha344/pixlandx/tools migrategen -d internal/infrastructure/mongo/migration -t DBClient -n "FooBar"
 
 type DBClient = *mongox.Client
 

@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/util"
 )
 
 type PasswordReset struct {

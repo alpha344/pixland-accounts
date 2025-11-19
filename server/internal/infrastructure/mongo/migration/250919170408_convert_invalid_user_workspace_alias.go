@@ -8,7 +8,7 @@ import (
 
 	"github.com/go-playground/validator/v10"
 	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
-	"github.com/reearth/reearthx/mongox"
+	"github.com/alpha344/pixlandx/mongox"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

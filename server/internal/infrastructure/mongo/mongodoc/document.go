@@ -3,8 +3,8 @@ package mongodoc
 import (
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/i18n"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/i18n"
+	"github.com/alpha344/pixlandx/rerror"
 	"go.mongodb.org/mongo-driver/bson"
 )
 

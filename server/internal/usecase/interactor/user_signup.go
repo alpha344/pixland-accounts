@@ -18,10 +18,10 @@ import (
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/i18n"
-	"github.com/reearth/reearthx/log"
-	"github.com/reearth/reearthx/mailer"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/i18n"
+	"github.com/alpha344/pixlandx/log"
+	"github.com/alpha344/pixlandx/mailer"
+	"github.com/alpha344/pixlandx/rerror"
 	"github.com/samber/lo"
 )
 

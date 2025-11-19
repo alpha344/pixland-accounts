@@ -9,7 +9,7 @@ import (
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
-	"github.com/reearth/reearthx/usecasex"
+	"github.com/alpha344/pixlandx/usecasex"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -31,7 +31,7 @@ func Init(p InitParams) (*user.User, *Workspace, error) {
 		p.Theme = &t
 	}
 	if p.Sub == nil {
-		p.Sub = user.GenReearthSub(p.UserID.String())
+		p.Sub = user.GenPixlandSub(p.UserID.String())
 	}
 
 	metadata := user.NewMetadata()
@@ -67,6 +67,3 @@ func Init(p InitParams) (*user.User, *Workspace, error) {
 
 	return u, t, err
 }
-
-
-

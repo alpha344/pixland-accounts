@@ -1,6 +1,6 @@
 package pagination
 
-import "github.com/reearth/reearthx/usecasex"
+import "github.com/alpha344/pixlandx/usecasex"
 
 const maxPerPage = 100
 const defaultPerPage int64 = 50

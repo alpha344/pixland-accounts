@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/reearth/reearthx/idx"
+	"github.com/alpha344/pixlandx/idx"
 	"github.com/stretchr/testify/assert"
 	"golang.org/x/text/language"
 )

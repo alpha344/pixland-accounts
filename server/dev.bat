@@ -3,7 +3,7 @@ setlocal
 
 REM Configuration
 set TARGET_TEST=./...
-set REEARTH_DB=mongodb://localhost
+set PIXLAND_ACCOUNTS_DB=mongodb://localhost
 set DOCKER_COMPOSE=docker compose -f ../docker-compose.yml
 set DOCKER_COMPOSE_DEV=docker compose -f ../docker-compose.dev.yml
 
@@ -30,7 +30,7 @@ echo.
 echo Targets:
 echo   dev-install       Install tools for dev (air, mockgen)
 echo   dev               Run the application with hot reloading
-echo   run               Run reearth-cerbos and reearth-accounts via docker-compose
+echo   run               Run pixland-cerbos and pixland-accounts via docker-compose
 echo   down              Stop and remove containers started by run
 echo   run-app           Run the application
 echo   run-cerbos        Run the Cerbos server
@@ -65,8 +65,8 @@ air
 goto end
 
 :run
-echo Starting reearth-accounts-dev with Docker Compose...
-%DOCKER_COMPOSE_DEV% up reearth-accounts-dev
+echo Starting pixland-accounts-dev with Docker Compose...
+%DOCKER_COMPOSE_DEV% up pixland-accounts-dev
 goto end
 
 :down
@@ -75,24 +75,24 @@ echo Stopping Docker Compose services...
 goto end
 
 :run-app
-echo Running reearth-accounts...
-go run ./cmd/reearth-accounts
+echo Running pixland-accounts...
+go run ./cmd/pixland-accounts
 goto end
 
 :run-cerbos
 echo Starting Cerbos server...
-%DOCKER_COMPOSE% up -d reearth-cerbos
+%DOCKER_COMPOSE% up -d pixland-cerbos
 goto end
 
 :run-migration
 echo Running database migrations...
 set RUN_MIGRATION=true
-go run ./cmd/reearth-accounts
+go run ./cmd/pixland-accounts
 goto end
 
 :test
 echo Running tests...
-set REEARTH_DB=%REEARTH_DB%
+set PIXLAND_ACCOUNTS_DB=%PIXLAND_ACCOUNTS_DB%
 go test %TARGET_TEST%
 goto end
 

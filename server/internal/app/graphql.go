@@ -13,7 +13,7 @@ import (
 	"github.com/alpha344/pixland-accounts/server/internal/adapter"
 	"github.com/alpha344/pixland-accounts/server/internal/adapter/gql"
 	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/storage"
-	"github.com/reearth/reearthx/log"
+	"github.com/alpha344/pixlandx/log"
 
 	"github.com/labstack/echo/v4"
 	"github.com/ravilushqa/otelgqlgen"

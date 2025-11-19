@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/reearth/reearthx/log"
+	"github.com/alpha344/pixlandx/log"
 )
 
 type AccountsError error

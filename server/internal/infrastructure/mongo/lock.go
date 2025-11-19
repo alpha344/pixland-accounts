@@ -8,8 +8,8 @@ import (
 	"github.com/avast/retry-go/v4"
 	"github.com/google/uuid"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
-	"github.com/reearth/reearthx/log"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/log"
+	"github.com/alpha344/pixlandx/rerror"
 	lock "github.com/square/mongo-lock"
 	"go.mongodb.org/mongo-driver/mongo"
 )

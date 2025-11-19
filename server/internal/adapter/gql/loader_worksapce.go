@@ -9,7 +9,7 @@ import (
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/util"
 )
 
 type WorkspaceLoader struct {

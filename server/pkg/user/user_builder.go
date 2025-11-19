@@ -2,8 +2,8 @@ package user
 
 import (
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
-	"github.com/reearth/reearthx/i18n"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/i18n"
+	"github.com/alpha344/pixlandx/rerror"
 )
 
 var ErrInvalidName = rerror.NewE(i18n.T("invalid user name"))

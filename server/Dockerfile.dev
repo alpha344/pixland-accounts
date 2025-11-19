@@ -5,7 +5,7 @@ RUN apk add --update --no-cache git ca-certificates build-base curl
 # Install air for hot reload
 RUN go install github.com/air-verse/air@v1.61.5
 
-WORKDIR /reearth-accounts
+WORKDIR /pixland-accounts
 
 # Copy go mod files
 COPY go.mod go.sum ./

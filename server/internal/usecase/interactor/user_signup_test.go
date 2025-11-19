@@ -15,9 +15,9 @@ import (
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/mailer"
-	"github.com/reearth/reearthx/rerror"
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/mailer"
+	"github.com/alpha344/pixlandx/rerror"
+	"github.com/alpha344/pixlandx/util"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -45,7 +45,7 @@ func TestUser_Signup(t *testing.T) {
 		{
 			name:            "without secret",
 			signupSecret:    "",
-			authSrvUIDomain: "https://reearth.io",
+			authSrvUIDomain: "https://pixland.io",
 			args: interfaces.SignupParam{
 				Email:       "aaa@bbb.com",
 				Name:        "NAME",
@@ -73,7 +73,7 @@ func TestUser_Signup(t *testing.T) {
 				MustBuild(),
 			wantMailTo:      []mailer.Contact{{Email: "aaa@bbb.com", Name: "NAME"}},
 			wantMailSubject: "email verification",
-			wantMailContent: "https://reearth.io/?user-verification-token=CODECODE",
+			wantMailContent: "https://pixland.io/?user-verification-token=CODECODE",
 			wantError:       nil,
 		},
 		{
@@ -367,6 +367,3 @@ func TestUser_CreateVerification(t *testing.T) {
 		})
 	}
 }
-
-
-

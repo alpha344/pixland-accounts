@@ -2,7 +2,7 @@ package app
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/reearth/reearthx/log"
+	"github.com/alpha344/pixlandx/log"
 )
 
 func AccessLogger(l *log.Echo) echo.MiddlewareFunc {

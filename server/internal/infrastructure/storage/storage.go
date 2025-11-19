@@ -13,8 +13,8 @@ import (
 
 	"cloud.google.com/go/storage"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
-	"github.com/reearth/reearthx/asset/domain/file"
-	"github.com/reearth/reearthx/log"
+	"github.com/alpha344/pixlandx/asset/domain/file"
+	"github.com/alpha344/pixlandx/log"
 	"google.golang.org/api/option"
 )
 

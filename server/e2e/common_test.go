@@ -8,8 +8,6 @@ import (
 
 	"github.com/cerbos/cerbos-sdk-go/cerbos"
 
-	httpexpect "github.com/gavv/httpexpect/v2"
-	"github.com/labstack/gommon/log"
 	"github.com/alpha344/pixland-accounts/server/internal/app"
 	infraCerbos "github.com/alpha344/pixland-accounts/server/internal/infrastructure/cerbos"
 	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/memory"
@@ -18,8 +16,10 @@ import (
 	gatewaymock "github.com/alpha344/pixland-accounts/server/internal/usecase/gateway/mock"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
-	"github.com/reearth/reearthx/mailer"
-	"github.com/reearth/reearthx/mongox/mongotest"
+	"github.com/alpha344/pixlandx/mailer"
+	"github.com/alpha344/pixlandx/mongox/mongotest"
+	httpexpect "github.com/gavv/httpexpect/v2"
+	"github.com/labstack/gommon/log"
 	"go.uber.org/mock/gomock"
 )
 
@@ -30,7 +30,7 @@ var (
 type Seeder func(ctx context.Context, r *repo.Container) error
 
 func init() {
-	mongotest.Env = "REEARTH_DB"
+	mongotest.Env = "PIXLAND_ACCOUNTS_DB"
 }
 
 func StartServer(t *testing.T, cfg *app.Config, useMongo bool, seeder Seeder) (*httpexpect.Expect, *repo.Container) {
@@ -132,6 +132,3 @@ func StartServerWithRepos(
 	})
 	return httpexpect.Default(t, "http://"+l.Addr().String())
 }
-
-
-

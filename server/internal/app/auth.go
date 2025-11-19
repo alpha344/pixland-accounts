@@ -14,18 +14,18 @@ import (
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/appx"
-	"github.com/reearth/reearthx/log"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/appx"
+	"github.com/alpha344/pixlandx/log"
+	"github.com/alpha344/pixlandx/rerror"
 )
 
 const (
-	debugUserHeader      = "X-Reearth-Debug-User"
-	debugAuthSubHeader   = "X-Reearth-Debug-Auth-Sub"
-	debugAuthIssHeader   = "X-Reearth-Debug-Auth-Iss"
-	debugAuthTokenHeader = "X-Reearth-Debug-Auth-Token"
-	debugAuthNameHeader  = "X-Reearth-Debug-Auth-Name"
-	debugAuthEmailHeader = "X-Reearth-Debug-Auth-Email"
+	debugUserHeader      = "X-Pixland-Debug-User"
+	debugAuthSubHeader   = "X-Pixland-Debug-Auth-Sub"
+	debugAuthIssHeader   = "X-Pixland-Debug-Auth-Iss"
+	debugAuthTokenHeader = "X-Pixland-Debug-Auth-Token"
+	debugAuthNameHeader  = "X-Pixland-Debug-Auth-Name"
+	debugAuthEmailHeader = "X-Pixland-Debug-Auth-Email"
 )
 
 type graphqlRequest struct {
@@ -197,6 +197,3 @@ func injectDebugAuthInfo(ctx context.Context, req *http.Request) (context.Contex
 	}
 	return context.WithValue(ctx, adapter.AuthInfoKey, *ai), ai
 }
-
-
-

@@ -5,7 +5,7 @@ import (
 	"net/mail"
 	"slices"
 
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/util"
 )
 
 var (
