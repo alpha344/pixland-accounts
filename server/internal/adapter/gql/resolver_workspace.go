@@ -4,10 +4,10 @@ import (
 	"context"
 
 	"github.com/labstack/gommon/log"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/adapter/gql/gqlmodel"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/interfaces"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/gqlclient/gqlerror"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/internal/adapter/gql/gqlmodel"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
+	"github.com/alpha344/pixland-accounts/server/pkg/gqlclient/gqlerror"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
 )
 
 func (r *Resolver) WorkspaceUserMember() WorkspaceUserMemberResolver {

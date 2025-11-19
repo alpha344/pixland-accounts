@@ -4,9 +4,9 @@ import (
 	"io"
 	"testing"
 
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/permittable"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/pkg/permittable"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/samber/lo"
 	"github.com/stretchr/testify/assert"
 	"go.mongodb.org/mongo-driver/bson"

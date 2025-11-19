@@ -3,7 +3,7 @@ package mongo
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/reearth/reearthx/mongox"
 	"go.mongodb.org/mongo-driver/mongo"
 )

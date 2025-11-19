@@ -10,9 +10,9 @@ import (
 	"github.com/99designs/gqlgen/graphql/handler/extension"
 	"github.com/99designs/gqlgen/graphql/handler/lru"
 	"github.com/99designs/gqlgen/graphql/handler/transport"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/adapter"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/adapter/gql"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/infrastructure/storage"
+	"github.com/alpha344/pixland-accounts/server/internal/adapter"
+	"github.com/alpha344/pixland-accounts/server/internal/adapter/gql"
+	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/storage"
 	"github.com/reearth/reearthx/log"
 
 	"github.com/labstack/echo/v4"

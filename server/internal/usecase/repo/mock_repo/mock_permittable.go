@@ -13,9 +13,9 @@ import (
 	context "context"
 	reflect "reflect"
 
-	id "github.com/pixair-technologies/pixland-accounts/server/pkg/id"
-	permittable "github.com/pixair-technologies/pixland-accounts/server/pkg/permittable"
-	user "github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	id "github.com/alpha344/pixland-accounts/server/pkg/id"
+	permittable "github.com/alpha344/pixland-accounts/server/pkg/permittable"
+	user "github.com/alpha344/pixland-accounts/server/pkg/user"
 	gomock "go.uber.org/mock/gomock"
 )
 

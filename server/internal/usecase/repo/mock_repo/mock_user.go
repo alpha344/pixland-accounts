@@ -13,7 +13,7 @@ import (
 	context "context"
 	reflect "reflect"
 
-	user "github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	user "github.com/alpha344/pixland-accounts/server/pkg/user"
 	gomock "go.uber.org/mock/gomock"
 )
 

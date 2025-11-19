@@ -5,8 +5,8 @@ import (
 
 	"github.com/hasura/go-graphql-client"
 	"github.com/labstack/gommon/log"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/gqlclient/gqlerror"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/workspace"
+	"github.com/alpha344/pixland-accounts/server/pkg/gqlclient/gqlerror"
+	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
 )
 
 type Workspace struct {

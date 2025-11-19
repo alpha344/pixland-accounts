@@ -3,8 +3,8 @@ package repo
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/role"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/pkg/role"
 )
 
 //go:generate mockgen -source=./role.go -destination=./mock_repo/mock_role.go -package mock_repo

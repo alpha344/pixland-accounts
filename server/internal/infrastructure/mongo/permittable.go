@@ -3,10 +3,10 @@ package mongo
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/permittable"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/pkg/permittable"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/reearth/reearthx/mongox"
 	"github.com/reearth/reearthx/rerror"
 	"go.mongodb.org/mongo-driver/bson"

@@ -5,7 +5,7 @@ package gql
 import (
 	"errors"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/gateway"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
 )
 
 // THIS CODE IS A STARTING POINT ONLY. IT WILL NOT BE UPDATED WITH SCHEMA CHANGES.

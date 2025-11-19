@@ -4,9 +4,9 @@ import (
 	"context"
 	"errors"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/config"
+	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/pkg/config"
 	"github.com/reearth/reearthx/rerror"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"

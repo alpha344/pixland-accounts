@@ -5,9 +5,9 @@ import (
 	"errors"
 
 	"github.com/labstack/gommon/log"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/gateway"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/workspace"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
 )
 
 func ToWorkspace(

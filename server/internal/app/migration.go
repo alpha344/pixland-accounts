@@ -4,12 +4,12 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/permittable"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/role"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/workspace"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/pkg/permittable"
+	"github.com/alpha344/pixland-accounts/server/pkg/role"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
 	"github.com/reearth/reearthx/log"
 	"github.com/reearth/reearthx/rerror"
 )

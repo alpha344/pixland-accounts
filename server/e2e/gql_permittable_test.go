@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	httpexpect "github.com/gavv/httpexpect/v2"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/app"
+	"github.com/alpha344/pixland-accounts/server/internal/app"
 )
 
 func getUsersWithRoles(e *httpexpect.Expect) (GraphQLRequest, *httpexpect.Value) {

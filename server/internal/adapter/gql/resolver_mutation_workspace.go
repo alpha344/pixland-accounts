@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/labstack/gommon/log"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/adapter/gql/gqlmodel"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/workspace"
+	"github.com/alpha344/pixland-accounts/server/internal/adapter/gql/gqlmodel"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
 )
 
 func (r *mutationResolver) CreateWorkspace(ctx context.Context, input gqlmodel.CreateWorkspaceInput) (*gqlmodel.CreateWorkspacePayload, error) {

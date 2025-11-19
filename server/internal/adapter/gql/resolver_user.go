@@ -3,8 +3,8 @@ package gql
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/adapter/gql/gqlmodel"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/internal/adapter/gql/gqlmodel"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
 )
 
 func (r *Resolver) Me() MeResolver {

@@ -3,7 +3,7 @@ package pagination_test
 import (
 	"testing"
 
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/pagination"
+	"github.com/alpha344/pixland-accounts/server/pkg/pagination"
 	"github.com/stretchr/testify/assert"
 )
 

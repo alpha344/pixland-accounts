@@ -3,11 +3,11 @@ package app
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/infrastructure/auth0"
-	mongorepo "github.com/pixair-technologies/pixland-accounts/server/internal/infrastructure/mongo"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/infrastructure/storage"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/gateway"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/auth0"
+	mongorepo "github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo"
+	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/storage"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/reearth/reearthx/log"
 	"github.com/reearth/reearthx/mailer"
 	"github.com/reearth/reearthx/mongox"

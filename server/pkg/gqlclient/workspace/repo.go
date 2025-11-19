@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/hasura/go-graphql-client"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/gqlclient/gqlerror"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/gqlclient/gqlmodel"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/workspace"
+	"github.com/alpha344/pixland-accounts/server/pkg/gqlclient/gqlerror"
+	"github.com/alpha344/pixland-accounts/server/pkg/gqlclient/gqlmodel"
+	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
 )
 
 type workspaceRepo struct {

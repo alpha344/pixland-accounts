@@ -3,7 +3,7 @@ package repo
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/config"
+	"github.com/alpha344/pixland-accounts/server/pkg/config"
 )
 
 type Config interface {

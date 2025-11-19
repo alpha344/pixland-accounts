@@ -2,7 +2,7 @@ package user
 
 import (
 	"github.com/hasura/go-graphql-client"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/gqlclient/gqlmodel"
+	"github.com/alpha344/pixland-accounts/server/pkg/gqlclient/gqlmodel"
 )
 
 type findMeQuery struct {

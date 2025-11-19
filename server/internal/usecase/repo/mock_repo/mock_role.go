@@ -13,8 +13,8 @@ import (
 	context "context"
 	reflect "reflect"
 
-	id "github.com/pixair-technologies/pixland-accounts/server/pkg/id"
-	role "github.com/pixair-technologies/pixland-accounts/server/pkg/role"
+	id "github.com/alpha344/pixland-accounts/server/pkg/id"
+	role "github.com/alpha344/pixland-accounts/server/pkg/role"
 	gomock "go.uber.org/mock/gomock"
 )
 

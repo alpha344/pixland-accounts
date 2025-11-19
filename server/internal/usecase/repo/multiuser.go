@@ -4,7 +4,7 @@ import (
 	"context"
 	"errors"
 
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/reearth/reearthx/rerror"
 )
 

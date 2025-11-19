@@ -3,9 +3,9 @@ package adapter
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/interfaces"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/reearth/reearthx/appx"
 )
 

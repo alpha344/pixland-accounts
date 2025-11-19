@@ -1,7 +1,7 @@
 package user
 
 import (
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
 )
 
 type ID = id.UserID

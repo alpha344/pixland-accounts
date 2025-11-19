@@ -5,10 +5,10 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/interfaces"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/reearth/reearthx/usecasex"
 	"github.com/stretchr/testify/assert"
 )

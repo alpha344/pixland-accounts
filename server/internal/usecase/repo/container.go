@@ -1,8 +1,8 @@
 package repo
 
 import (
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/reearth/reearthx/i18n"
 	"github.com/reearth/reearthx/rerror"
 	"github.com/reearth/reearthx/usecasex"

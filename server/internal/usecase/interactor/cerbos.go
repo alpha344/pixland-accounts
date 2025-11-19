@@ -8,10 +8,10 @@ import (
 
 	"github.com/cerbos/cerbos-sdk-go/cerbos"
 	effectv1 "github.com/cerbos/cerbos/api/genpb/cerbos/effect/v1"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/gateway"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/interfaces"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/reearth/reearthx/rerror"
 )
 

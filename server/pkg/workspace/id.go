@@ -1,6 +1,6 @@
 package workspace
 
-import "github.com/pixair-technologies/pixland-accounts/server/pkg/id"
+import "github.com/alpha344/pixland-accounts/server/pkg/id"
 
 type ID = id.WorkspaceID
 type IDList = id.WorkspaceIDList

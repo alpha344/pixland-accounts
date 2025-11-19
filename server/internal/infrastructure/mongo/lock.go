@@ -7,7 +7,7 @@ import (
 
 	"github.com/avast/retry-go/v4"
 	"github.com/google/uuid"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/reearth/reearthx/log"
 	"github.com/reearth/reearthx/rerror"
 	lock "github.com/square/mongo-lock"

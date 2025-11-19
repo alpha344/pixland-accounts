@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/adapter/gql/gqlmodel"
+	"github.com/alpha344/pixland-accounts/server/internal/adapter/gql/gqlmodel"
 )
 
 // WorkspaceLoaderConfig captures the config to create a new WorkspaceLoader

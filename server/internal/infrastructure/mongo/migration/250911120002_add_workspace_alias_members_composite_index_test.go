@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/infrastructure/mongo"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
+	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo"
+	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
 	"github.com/reearth/reearthx/mongox"
 	"github.com/stretchr/testify/assert"
 	mongodriver "go.mongodb.org/mongo-driver/mongo"

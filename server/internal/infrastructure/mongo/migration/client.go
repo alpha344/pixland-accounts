@@ -5,8 +5,8 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/config"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/pkg/config"
 	"github.com/reearth/reearthx/mongox"
 	"github.com/reearth/reearthx/usecasex/migration"
 )

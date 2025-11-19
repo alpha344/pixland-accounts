@@ -5,8 +5,8 @@ import (
 	"log"
 	"regexp"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/reearth/reearthx/mongox"
 	"go.mongodb.org/mongo-driver/bson"
 )

@@ -1,7 +1,7 @@
 package memory
 
 import (
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/reearth/reearthx/usecasex"
 )
 

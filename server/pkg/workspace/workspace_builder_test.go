@@ -3,7 +3,7 @@ package workspace
 import (
 	"testing"
 
-	accountsid "github.com/pixair-technologies/pixland-accounts/server/pkg/id"
+	accountsid "github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/reearth/reearthx/idx"
 	"github.com/stretchr/testify/assert"
 )

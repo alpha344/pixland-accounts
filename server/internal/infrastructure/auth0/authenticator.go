@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/gateway"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
 	"github.com/reearth/reearthx/i18n"
 	"github.com/reearth/reearthx/log"
 	"github.com/reearth/reearthx/rerror"

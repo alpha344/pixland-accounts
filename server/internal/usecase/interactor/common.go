@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/cerbos/cerbos-sdk-go/cerbos"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/gateway"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/interfaces"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 )
 
 type ContainerConfig struct {

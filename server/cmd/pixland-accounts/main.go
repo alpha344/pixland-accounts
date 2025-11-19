@@ -1,6 +1,6 @@
 package main
 
-import "github.com/pixair-technologies/pixland-accounts/server/internal/app"
+import "github.com/alpha344/pixland-accounts/server/internal/app"
 
 func main() {
 	app.Start(debug)

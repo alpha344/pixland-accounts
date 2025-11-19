@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/hasura/go-graphql-client"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/gqlclient/user"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/gqlclient/workspace"
+	"github.com/alpha344/pixland-accounts/server/pkg/gqlclient/user"
+	"github.com/alpha344/pixland-accounts/server/pkg/gqlclient/workspace"
 )
 
 type Client struct {

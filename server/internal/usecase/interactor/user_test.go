@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/infrastructure/memory"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/gateway"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/memory"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/reearth/reearthx/mailer"
 	"github.com/reearth/reearthx/rerror"
 

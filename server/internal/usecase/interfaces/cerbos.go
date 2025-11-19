@@ -3,7 +3,7 @@ package interfaces
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
 )
 
 type CheckPermissionParam struct {

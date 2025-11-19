@@ -1,4 +1,4 @@
-module github.com/pixair-technologies/pixland-accounts/server
+module github.com/alpha344/pixland-accounts/server
 
 go 1.24.2
 

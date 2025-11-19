@@ -1,7 +1,7 @@
 package workspace
 
 import (
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"golang.org/x/text/language"
 )
 

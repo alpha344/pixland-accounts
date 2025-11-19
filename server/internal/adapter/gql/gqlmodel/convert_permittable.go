@@ -1,9 +1,9 @@
 package gqlmodel
 
 import (
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/permittable"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/role"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/pkg/permittable"
+	"github.com/alpha344/pixland-accounts/server/pkg/role"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
 )
 
 func ToUsersWithRoles(users user.List, userRoleMap map[user.ID]role.List) []*UserWithRoles {

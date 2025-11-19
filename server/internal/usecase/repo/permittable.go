@@ -3,9 +3,9 @@ package repo
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/permittable"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/user"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/pkg/permittable"
+	"github.com/alpha344/pixland-accounts/server/pkg/user"
 )
 
 //go:generate mockgen -source=./permittable.go -destination=./mock_repo/mock_permittable.go -package mock_repo

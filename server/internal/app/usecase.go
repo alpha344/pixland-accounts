@@ -4,10 +4,10 @@ import (
 	"context"
 
 	"github.com/labstack/echo/v4"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/adapter"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/gateway"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/interactor"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/repo"
+	"github.com/alpha344/pixland-accounts/server/internal/adapter"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/interactor"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 )
 
 func UsecaseMiddleware(

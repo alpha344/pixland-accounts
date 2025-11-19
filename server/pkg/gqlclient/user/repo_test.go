@@ -9,8 +9,8 @@ import (
 	"testing"
 
 	"github.com/jarcoal/httpmock"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/gqlclient"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/gqlclient/user"
+	"github.com/alpha344/pixland-accounts/server/pkg/gqlclient"
+	"github.com/alpha344/pixland-accounts/server/pkg/gqlclient/user"
 	"github.com/stretchr/testify/assert"
 )
 

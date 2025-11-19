@@ -3,10 +3,10 @@ package gql
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/adapter"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/adapter/gql/gqlmodel"
-	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/interfaces"
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/id"
+	"github.com/alpha344/pixland-accounts/server/internal/adapter"
+	"github.com/alpha344/pixland-accounts/server/internal/adapter/gql/gqlmodel"
+	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
+	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/samber/lo"
 	"golang.org/x/text/language"
 )

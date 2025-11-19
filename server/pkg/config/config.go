@@ -3,7 +3,7 @@ package config
 import (
 	"sort"
 
-	"github.com/pixair-technologies/pixland-accounts/server/pkg/policy"
+	"github.com/alpha344/pixland-accounts/server/pkg/policy"
 )
 
 type Config struct {

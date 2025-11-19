@@ -3,7 +3,7 @@ package gql
 import (
 	"context"
 
-	"github.com/pixair-technologies/pixland-accounts/server/internal/adapter/gql/gqlmodel"
+	"github.com/alpha344/pixland-accounts/server/internal/adapter/gql/gqlmodel"
 )
 
 func (r *queryResolver) Roles(ctx context.Context) (*gqlmodel.RolesPayload, error) {
