@@ -1,6 +1,6 @@
 package workspace
 
-import "github.com/reearth/reearthx/util"
+import "github.com/alpha344/pixlandx/util"
 
 type Workspace struct {
 	id       ID

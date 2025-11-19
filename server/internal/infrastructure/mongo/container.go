@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
-	"github.com/reearth/reearthx/mongox"
+	"github.com/alpha344/pixlandx/mongox"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 

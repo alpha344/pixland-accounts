@@ -7,13 +7,13 @@ import (
 	"net/http/pprof"
 
 	"github.com/99designs/gqlgen/graphql/playground"
-	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
 	"github.com/alpha344/pixland-accounts/server/internal/adapter"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/interactor"
-	"github.com/reearth/reearthx/appx"
-	"github.com/reearth/reearthx/log"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/appx"
+	"github.com/alpha344/pixlandx/log"
+	"github.com/alpha344/pixlandx/rerror"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 )
 
 func initEcho(ctx context.Context, cfg *ServerConfig) *echo.Echo {
@@ -67,7 +67,7 @@ func initEcho(ctx context.Context, cfg *ServerConfig) *echo.Echo {
 	// GraphQL Playground without auth
 	if cfg.Debug || cfg.Config.Dev {
 		e.GET("/graphql", echo.WrapHandler(
-			playground.Handler("reearth-cloud", "/api/graphql"),
+			playground.Handler("pixland-cloud", "/api/graphql"),
 		))
 		log.Printf("gql: GraphQL Playground is available")
 	}
@@ -147,6 +147,3 @@ func cacheControl(next echo.HandlerFunc) echo.HandlerFunc {
 		return next(c)
 	}
 }
-
-
-

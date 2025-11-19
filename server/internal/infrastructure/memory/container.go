@@ -2,7 +2,7 @@ package memory
 
 import (
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
-	"github.com/reearth/reearthx/usecasex"
+	"github.com/alpha344/pixlandx/usecasex"
 )
 
 func New() *repo.Container {

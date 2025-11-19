@@ -1,8 +1,8 @@
 package interfaces
 
 import (
-	"github.com/reearth/reearthx/i18n"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/i18n"
+	"github.com/alpha344/pixlandx/rerror"
 )
 
 var (

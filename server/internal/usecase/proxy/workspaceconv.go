@@ -4,7 +4,7 @@ import (
 	accountid "github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/util"
 )
 
 func WorkspaceByIDsResponseTo(r *WorkspaceByIDsResponse, err error) ([]*workspace.Workspace, error) {

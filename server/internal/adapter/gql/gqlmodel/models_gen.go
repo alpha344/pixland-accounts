@@ -513,5 +513,3 @@ func (e Theme) MarshalJSON() ([]byte, error) {
 	e.MarshalGQL(&buf)
 	return buf.Bytes(), nil
 }
-
-

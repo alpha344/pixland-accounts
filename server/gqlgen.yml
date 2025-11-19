@@ -28,6 +28,6 @@ models:
   FileSize:
     model: github.com/99designs/gqlgen/graphql.Int64
   Cursor:
-    model: github.com/reearth/reearthx/usecasex.Cursor
+    model: github.com/alpha344/pixlandx/usecasex.Cursor
   ID:
-    model: github.com/reearth/reearth-accounts/server/internal/adapter/gql/gqlmodel.ID
+    model: github.com/alpha344/pixland-accounts/server/internal/adapter/gql/gqlmodel.ID

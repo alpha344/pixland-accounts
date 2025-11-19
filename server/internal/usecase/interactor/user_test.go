@@ -10,8 +10,8 @@ import (
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
-	"github.com/reearth/reearthx/mailer"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/mailer"
+	"github.com/alpha344/pixlandx/rerror"
 
 	"github.com/stretchr/testify/assert"
 )
@@ -129,8 +129,8 @@ func TestUser_StartPasswordReset(t *testing.T) {
 				Name("NAME").
 				Auths([]user.Auth{
 					{
-						Provider: user.ProviderReearth,
-						Sub:      "reearth|" + uid.String(),
+						Provider: user.ProviderPixland,
+						Sub:      "pixland|" + uid.String(),
 					},
 				}).
 				MustBuild(),
@@ -207,8 +207,8 @@ func TestUser_PasswordReset(t *testing.T) {
 				PasswordReset(pr).
 				Auths([]user.Auth{
 					{
-						Provider: user.ProviderReearth,
-						Sub:      "reearth|" + uid.String(),
+						Provider: user.ProviderPixland,
+						Sub:      "pixland|" + uid.String(),
 					},
 				}).
 				MustBuild(),
@@ -228,8 +228,8 @@ func TestUser_PasswordReset(t *testing.T) {
 				PasswordReset(pr).
 				Auths([]user.Auth{
 					{
-						Provider: user.ProviderReearth,
-						Sub:      "reearth|" + uid.String(),
+						Provider: user.ProviderPixland,
+						Sub:      "pixland|" + uid.String(),
 					},
 				}).
 				MustBuild(),
@@ -248,8 +248,8 @@ func TestUser_PasswordReset(t *testing.T) {
 				Verification(user.VerificationFrom("code", expired, false)).
 				Auths([]user.Auth{
 					{
-						Provider: user.ProviderReearth,
-						Sub:      "reearth|" + uid.String(),
+						Provider: user.ProviderPixland,
+						Sub:      "pixland|" + uid.String(),
 					},
 				}).
 				MustBuild(),

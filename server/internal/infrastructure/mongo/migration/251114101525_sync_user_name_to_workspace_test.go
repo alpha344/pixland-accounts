@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
-	"github.com/reearth/reearthx/mongox"
-	"github.com/reearth/reearthx/mongox/mongotest"
+	"github.com/alpha344/pixlandx/mongox"
+	"github.com/alpha344/pixlandx/mongox/mongotest"
 	"github.com/stretchr/testify/assert"
 	"go.mongodb.org/mongo-driver/bson"
 )

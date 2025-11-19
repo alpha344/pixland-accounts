@@ -32,7 +32,7 @@ func getUsersWithRoles(e *httpexpect.Expect) (GraphQLRequest, *httpexpect.Value)
 	res := e.POST("/api/graphql").
 		WithHeader("Origin", "https://example.com").
 		WithHeader("authorization", "Bearer test").
-		WithHeader("X-Reearth-Debug-User", uID.String()).
+		WithHeader("X-Pixland-Debug-User", uID.String()).
 		WithHeader("Content-Type", "application/json").
 		WithJSON(getUsersWithRolesRequestBody).
 		Expect().
@@ -65,7 +65,7 @@ func updatePermittable(e *httpexpect.Expect, userID string, roleIDs []string) (G
 	res := e.POST("/api/graphql").
 		WithHeader("Origin", "https://example.com").
 		WithHeader("authorization", "Bearer test").
-		WithHeader("X-Reearth-Debug-User", uID.String()).
+		WithHeader("X-Pixland-Debug-User", uID.String()).
 		WithHeader("Content-Type", "application/json").
 		WithJSON(updatePermittableRequestBody).
 		Expect().

@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	ProviderReearth = "reearth"
+	ProviderPixland = "pixland"
 	ProviderAuth0   = "auth0"
 )
 
@@ -25,15 +25,15 @@ func AuthFrom(sub string) Auth {
 	return Auth{Provider: s[0], Sub: sub}
 }
 
-func NewReearthAuth(sub string) Auth {
+func NewPixlandAuth(sub string) Auth {
 	return Auth{
-		Provider: ProviderReearth,
-		Sub:      "reearth|" + sub,
+		Provider: ProviderPixland,
+		Sub:      "pixland|" + sub,
 	}
 }
 
-func (a Auth) IsReearth() bool {
-	return a.Provider == ProviderReearth
+func (a Auth) IsPixland() bool {
+	return a.Provider == ProviderPixland
 }
 
 func (a Auth) IsAuth0() bool {
@@ -49,10 +49,10 @@ func (a Auth) String() string {
 	return a.Sub
 }
 
-func ReearthSub(userID string) *Auth {
+func GenPixlandSub(userID string) *Auth {
 	return &Auth{
-		Provider: "reearth",
-		Sub:      "reearth|" + userID,
+		Provider: "pixland",
+		Sub:      "pixland|" + userID,
 	}
 }
 
@@ -105,11 +105,9 @@ func (a Auths) RemoveByProvider(p string) Auths {
 	return slices.Delete(a, i, 1)
 }
 
-func GenReearthSub(userID string) *Auth {
+func PixlandSub(userID string) *Auth {
 	return &Auth{
-		Provider: "reearth",
-		Sub:      "reearth|" + userID,
+		Provider: "pixland",
+		Sub:      "pixland|" + userID,
 	}
 }
-
-

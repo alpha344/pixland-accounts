@@ -6,7 +6,7 @@ import (
 
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/alpha344/pixland-accounts/server/pkg/role"
-	"github.com/reearth/reearthx/mongox"
+	"github.com/alpha344/pixlandx/mongox"
 	"github.com/stretchr/testify/assert"
 	"go.mongodb.org/mongo-driver/bson"
 )

@@ -24,24 +24,24 @@ func TestAuthFrom(t *testing.T) {
 	}, AuthFrom(""))
 }
 
-func TestNewReearthAuth(t *testing.T) {
+func TestNewPixlandAuth(t *testing.T) {
 	assert.Equal(t, Auth{
-		Provider: "reearth",
-		Sub:      "reearth|xx|yy",
-	}, NewReearthAuth("xx|yy"))
+		Provider: "pixland",
+		Sub:      "pixland|xx|yy",
+	}, NewPixlandAuth("xx|yy"))
 }
-func TestIsReearth(t *testing.T) {
+func TestIsPixland(t *testing.T) {
 	a := Auth{
-		Provider: "reearth",
+		Provider: "pixland",
 		Sub:      "yy",
 	}
-	assert.True(t, a.IsReearth())
+	assert.True(t, a.IsPixland())
 
 	a = Auth{
 		Provider: "xx",
 		Sub:      "yy",
 	}
-	assert.False(t, a.IsReearth())
+	assert.False(t, a.IsPixland())
 }
 
 func TestIsAuth0(t *testing.T) {
@@ -58,13 +58,13 @@ func TestIsAuth0(t *testing.T) {
 	assert.False(t, a.IsAuth0())
 }
 
-func TestReearthSub(t *testing.T) {
+func TestPixlandSub(t *testing.T) {
 	uid := NewID().String()
 
 	assert.Equal(t, &Auth{
-		Provider: "reearth",
-		Sub:      "reearth|" + uid,
-	}, ReearthSub(uid))
+		Provider: "pixland",
+		Sub:      "pixland|" + uid,
+	}, PixlandSub(uid))
 }
 
 func TestAuth_Ref(t *testing.T) {
@@ -210,7 +210,7 @@ func TestAuths_RemoveByProvider(t *testing.T) {
 	}}), Auths(a).RemoveByProvider("foo"))
 }
 
-func TestGenReearthSub(t *testing.T) {
+func TestGenPixlandSub(t *testing.T) {
 	uid := id.NewUserID()
 
 	tests := []struct {
@@ -219,22 +219,19 @@ func TestGenReearthSub(t *testing.T) {
 		want  *Auth
 	}{
 		{
-			name:  "should return reearth sub",
+			name:  "should return pixland sub",
 			input: uid.String(),
 			want: &Auth{
-				Provider: "reearth",
-				Sub:      "reearth|" + uid.String(),
+				Provider: "pixland",
+				Sub:      "pixland|" + uid.String(),
 			},
 		},
 	}
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := GenReearthSub(tt.input)
+			got := GenPixlandSub(tt.input)
 			assert.Equal(t, tt.want, got)
 		})
 	}
 }
-
-
-

@@ -10,8 +10,8 @@ import (
 	"github.com/alpha344/pixland-accounts/server/pkg/role"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/log"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/log"
+	"github.com/alpha344/pixlandx/rerror"
 )
 
 func runMigration(ctx context.Context, repos *repo.Container) error {

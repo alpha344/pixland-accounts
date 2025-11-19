@@ -11,12 +11,12 @@ import (
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/idx"
+	"github.com/alpha344/pixlandx/idx"
 	"github.com/stretchr/testify/assert"
 )
 
 func baseSeederGetMe(ctx context.Context, r *repo.Container) error {
-	auth := user.ReearthSub(uId.String())
+	auth := user.PixlandSub(uId.String())
 	metadata := user.NewMetadata()
 	metadata.LangFrom("en")
 	metadata.SetTheme(user.ThemeLight)
@@ -141,7 +141,7 @@ func TestGetMeAllFields(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).
 		Expect().Status(http.StatusOK).
 		JSON().Object().
@@ -156,7 +156,7 @@ func TestGetMeAllFields(t *testing.T) {
 
 	auths := o.Value("auths").Array()
 	auths.Length().IsEqual(1)
-	auths.Value(0).String().Contains("reearth")
+	auths.Value(0).String().Contains("pixland")
 
 	metadata := o.Value("metadata").Object()
 	metadata.Value("description").String().IsEqual("Test user description")
@@ -184,7 +184,7 @@ func TestGetMeMinimalFields(t *testing.T) {
 	o := e.POST("/api/graphql").
 		WithHeader("authorization", "Bearer test").
 		WithHeader("Content-Type", "application/json").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithBytes(jsonData).
 		Expect().Status(http.StatusOK).
 		JSON().Object().
@@ -195,6 +195,3 @@ func TestGetMeMinimalFields(t *testing.T) {
 	o.Value("name").String().IsEqual("Test User")
 	o.Value("email").String().IsEqual("test@example.com")
 }
-
-
-

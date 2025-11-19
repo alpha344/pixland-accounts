@@ -25,7 +25,7 @@ func getRoles(e *httpexpect.Expect) (GraphQLRequest, *httpexpect.Value) {
 	res := e.POST("/api/graphql").
 		WithHeader("Origin", "https://example.com").
 		WithHeader("authorization", "Bearer test").
-		WithHeader("X-Reearth-Debug-User", uID.String()).
+		WithHeader("X-Pixland-Debug-User", uID.String()).
 		WithHeader("Content-Type", "application/json").
 		WithJSON(getRolesRequestBody).
 		Expect().
@@ -56,7 +56,7 @@ func addRole(e *httpexpect.Expect, roleName string) (GraphQLRequest, *httpexpect
 	res := e.POST("/api/graphql").
 		WithHeader("Origin", "https://example.com").
 		WithHeader("authorization", "Bearer test").
-		WithHeader("X-Reearth-Debug-User", uID.String()).
+		WithHeader("X-Pixland-Debug-User", uID.String()).
 		WithHeader("Content-Type", "application/json").
 		WithJSON(addRoleRequestBody).
 		Expect().
@@ -89,7 +89,7 @@ func updateRole(e *httpexpect.Expect, roleID string, newName string) (GraphQLReq
 	res := e.POST("/api/graphql").
 		WithHeader("Origin", "https://example.com").
 		WithHeader("authorization", "Bearer test").
-		WithHeader("X-Reearth-Debug-User", uID.String()).
+		WithHeader("X-Pixland-Debug-User", uID.String()).
 		WithHeader("Content-Type", "application/json").
 		WithJSON(updateRoleRequestBody).
 		Expect().
@@ -118,7 +118,7 @@ func removeRole(e *httpexpect.Expect, roleID string) (GraphQLRequest, *httpexpec
 	res := e.POST("/api/graphql").
 		WithHeader("Origin", "https://example.com").
 		WithHeader("authorization", "Bearer test").
-		WithHeader("X-Reearth-Debug-User", uID.String()).
+		WithHeader("X-Pixland-Debug-User", uID.String()).
 		WithHeader("Content-Type", "application/json").
 		WithJSON(removeRoleRequestBody).
 		Expect().

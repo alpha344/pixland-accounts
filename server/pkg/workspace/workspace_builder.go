@@ -3,7 +3,7 @@ package workspace
 import (
 	"errors"
 
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/util"
 )
 
 var ErrMembersRequired = errors.New("members required")

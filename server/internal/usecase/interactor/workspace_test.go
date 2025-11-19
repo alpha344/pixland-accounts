@@ -15,8 +15,8 @@ import (
 	"github.com/alpha344/pixland-accounts/server/pkg/role"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/idx"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/idx"
+	"github.com/alpha344/pixlandx/rerror"
 	"github.com/samber/lo"
 	"github.com/stretchr/testify/assert"
 )

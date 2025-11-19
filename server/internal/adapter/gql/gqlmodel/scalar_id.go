@@ -1,8 +1,8 @@
 package gqlmodel
 
 import (
-	"github.com/reearth/reearthx/idx"
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/idx"
+	"github.com/alpha344/pixlandx/util"
 )
 
 type ID string

@@ -8,9 +8,9 @@ import (
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/rerror"
-	"github.com/reearth/reearthx/usecasex"
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/rerror"
+	"github.com/alpha344/pixlandx/usecasex"
+	"github.com/alpha344/pixlandx/util"
 )
 
 type Workspace struct {

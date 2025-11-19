@@ -13,7 +13,7 @@ import (
 	context "context"
 	reflect "reflect"
 
-	file "github.com/reearth/reearthx/asset/domain/file"
+	file "github.com/alpha344/pixlandx/asset/domain/file"
 	gomock "go.uber.org/mock/gomock"
 )
 

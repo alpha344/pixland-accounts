@@ -8,9 +8,9 @@ import (
 	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/storage"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
-	"github.com/reearth/reearthx/log"
-	"github.com/reearth/reearthx/mailer"
-	"github.com/reearth/reearthx/mongox"
+	"github.com/alpha344/pixlandx/log"
+	"github.com/alpha344/pixlandx/mailer"
+	"github.com/alpha344/pixlandx/mongox"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 

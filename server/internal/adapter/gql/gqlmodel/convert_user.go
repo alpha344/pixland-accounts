@@ -5,7 +5,7 @@ import (
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
 	"github.com/samber/lo"
 
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/util"
 )
 
 func ToUser(u *user.User) *User {

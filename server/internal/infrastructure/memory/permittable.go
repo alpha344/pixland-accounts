@@ -8,7 +8,7 @@ import (
 	"github.com/alpha344/pixland-accounts/server/pkg/id"
 	"github.com/alpha344/pixland-accounts/server/pkg/permittable"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/rerror"
 )
 
 type Permittable struct {

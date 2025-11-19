@@ -8,15 +8,15 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/cerbos/cerbos-sdk-go/cerbos"
-	"github.com/labstack/echo/v4"
 	infraCerbos "github.com/alpha344/pixland-accounts/server/internal/infrastructure/cerbos"
 	mongorepo "github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo"
 	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo/migration"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/gateway"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
-	"github.com/reearth/reearthx/log"
-	"github.com/reearth/reearthx/mongox"
+	"github.com/alpha344/pixlandx/log"
+	"github.com/alpha344/pixlandx/mongox"
+	"github.com/cerbos/cerbos-sdk-go/cerbos"
+	"github.com/labstack/echo/v4"
 	"go.mongodb.org/mongo-driver/event"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
@@ -36,7 +36,7 @@ func Start(debug bool) {
 
 	// Init MongoDB client with optional command monitoring
 	var monitor *event.CommandMonitor
-	if debug || os.Getenv("REEARTH_ACCOUNTS_DEV") == "true" {
+	if debug || os.Getenv("PIXLAND_ACCOUNTS_DEV") == "true" {
 		monitor = &event.CommandMonitor{
 			Failed: func(ctx context.Context, evt *event.CommandFailedEvent) {
 				log.Errorf("MongoDB Command Failed: %s - Duration: %v - Error: %s",
@@ -91,7 +91,7 @@ func Start(debug bool) {
 
 	// Cerbos
 	var opts []cerbos.Opt
-	if os.Getenv("REEARTH_ACCOUNTS_DEV") == "true" {
+	if os.Getenv("PIXLAND_ACCOUNTS_DEV") == "true" {
 		opts = append(opts, cerbos.WithPlaintext(), cerbos.WithTLSInsecure())
 	}
 
@@ -176,6 +176,3 @@ func (w *WebServer) Serve(l net.Listener) error {
 func (w *WebServer) Shutdown(ctx context.Context) error {
 	return w.appServer.Shutdown(ctx)
 }
-
-
-

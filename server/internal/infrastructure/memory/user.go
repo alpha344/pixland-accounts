@@ -6,8 +6,8 @@ import (
 
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
-	"github.com/reearth/reearthx/rerror"
-	"github.com/reearth/reearthx/util"
+	"github.com/alpha344/pixlandx/rerror"
+	"github.com/alpha344/pixlandx/util"
 )
 
 type User struct {

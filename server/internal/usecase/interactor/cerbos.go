@@ -12,7 +12,7 @@ import (
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/rerror"
 )
 
 type Cerbos struct {

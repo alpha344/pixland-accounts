@@ -6,6 +6,7 @@ require (
 	cloud.google.com/go/storage v1.56.1
 	github.com/99designs/gqlgen v0.17.73
 	github.com/Khan/genqlient v0.8.1
+	github.com/alpha344/pixlandx v1.0.0
 	github.com/avast/retry-go/v4 v4.6.1
 	github.com/cerbos/cerbos-sdk-go v0.2.13
 	github.com/cerbos/cerbos/api/genpb v0.40.0
@@ -19,7 +20,6 @@ require (
 	github.com/labstack/echo/v4 v4.13.3
 	github.com/labstack/gommon v0.4.2
 	github.com/ravilushqa/otelgqlgen v0.17.0
-	github.com/reearth/reearthx v0.0.0-20250711044138-418475ad1421
 	github.com/samber/lo v1.50.0
 	github.com/square/mongo-lock v0.0.0-20230808145049-cfcf499f6bf0
 	github.com/stretchr/testify v1.10.0

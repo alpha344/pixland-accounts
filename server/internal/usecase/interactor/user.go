@@ -13,9 +13,9 @@ import (
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/i18n"
-	"github.com/reearth/reearthx/mailer"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/i18n"
+	"github.com/alpha344/pixlandx/mailer"
+	"github.com/alpha344/pixlandx/rerror"
 	"github.com/samber/lo"
 )
 
@@ -162,7 +162,7 @@ func (i *User) UpdateMe(ctx context.Context, p interfaces.UpdateMeParam, operato
 			}
 		}
 
-		if p.Password != nil && u.HasAuthProvider("reearth") {
+		if p.Password != nil && u.HasAuthProvider("pixland") {
 			if err := u.SetPassword(*p.Password); err != nil {
 				return nil, err
 			}
@@ -304,7 +304,7 @@ func (i *User) StartPasswordReset(ctx context.Context, email string) error {
 			return err
 		}
 
-		a := u.Auths().GetByProvider(user.ProviderReearth)
+		a := u.Auths().GetByProvider(user.ProviderPixland)
 		if a == nil || a.Sub == "" {
 			return interfaces.ErrUserInvalidPasswordReset
 		}
@@ -355,7 +355,7 @@ func (i *User) PasswordReset(ctx context.Context, password string, token string)
 			return interfaces.ErrUserInvalidPasswordReset
 		}
 
-		a := u.Auths().GetByProvider(user.ProviderReearth)
+		a := u.Auths().GetByProvider(user.ProviderPixland)
 		if a == nil || a.Sub == "" {
 			return interfaces.ErrUserInvalidPasswordReset
 		}
@@ -451,6 +451,3 @@ func (q *UserQuery) SearchUser(ctx context.Context, keyword string) (user.Simple
 	}
 	return nil, nil
 }
-
-
-

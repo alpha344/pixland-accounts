@@ -4,22 +4,22 @@ ARG VERSION
 
 RUN apk add --update --no-cache git ca-certificates build-base
 
-WORKDIR /reearth-accounts-api
+WORKDIR /pixland-accounts-api
 
-COPY go.mod go.sum main.go /reearth-accounts-api/
+COPY go.mod go.sum main.go /pixland-accounts-api/
 RUN go mod download
 
-COPY cmd/ /reearth-accounts-api/cmd/
-COPY pkg/ /reearth-accounts-api/pkg/
-COPY internal/ /reearth-accounts-api/internal/
+COPY cmd/ /pixland-accounts-api/cmd/
+COPY pkg/ /pixland-accounts-api/pkg/
+COPY internal/ /pixland-accounts-api/internal/
 
-RUN CGO_ENABLED=0 go build -o reearth-accounts-api -tags "${TAG}" "-ldflags=-X main.version=${VERSION} -s -w -buildid=" -trimpath ./cmd/reearth-accounts
+RUN CGO_ENABLED=0 go build -o pixland-accounts-api -tags "${TAG}" "-ldflags=-X main.version=${VERSION} -s -w -buildid=" -trimpath ./cmd/pixland-accounts
 
 FROM scratch
 
 COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
-COPY --from=build /reearth-accounts-api/reearth-accounts-api /reearth-accounts-api/reearth-accounts-api
+COPY --from=build /pixland-accounts-api/pixland-accounts-api /pixland-accounts-api/pixland-accounts-api
 
-WORKDIR /reearth-accounts-api
+WORKDIR /pixland-accounts-api
 
-CMD ["./reearth-accounts-api"]
+CMD ["./pixland-accounts-api"]

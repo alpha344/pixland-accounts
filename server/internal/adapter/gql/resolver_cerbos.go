@@ -5,7 +5,7 @@ import (
 
 	"github.com/alpha344/pixland-accounts/server/internal/adapter/gql/gqlmodel"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/rerror"
 )
 
 func (r *queryResolver) CheckPermission(ctx context.Context, input gqlmodel.CheckPermissionInput) (*gqlmodel.CheckPermissionPayload, error) {

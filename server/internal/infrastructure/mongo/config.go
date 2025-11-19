@@ -7,7 +7,7 @@ import (
 	"github.com/alpha344/pixland-accounts/server/internal/infrastructure/mongo/mongodoc"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/repo"
 	"github.com/alpha344/pixland-accounts/server/pkg/config"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/rerror"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

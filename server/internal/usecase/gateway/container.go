@@ -1,6 +1,6 @@
 package gateway
 
-import "github.com/reearth/reearthx/mailer"
+import "github.com/alpha344/pixlandx/mailer"
 
 type Container struct {
 	Authenticator Authenticator

@@ -6,7 +6,7 @@ import (
 	"github.com/alpha344/pixland-accounts/server/internal/usecase"
 	"github.com/alpha344/pixland-accounts/server/internal/usecase/interfaces"
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
-	"github.com/reearth/reearthx/appx"
+	"github.com/alpha344/pixlandx/appx"
 )
 
 type ContextKey string

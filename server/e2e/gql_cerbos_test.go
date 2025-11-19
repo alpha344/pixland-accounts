@@ -28,7 +28,7 @@ func checkPermission(e *httpexpect.Expect, service string, resource string, acti
 	res := e.POST("/api/graphql").
 		WithHeader("Origin", "https://example.com").
 		WithHeader("authorization", "Bearer test").
-		WithHeader("X-Reearth-Debug-User", uId.String()).
+		WithHeader("X-Pixland-Debug-User", uId.String()).
 		WithHeader("Content-Type", "application/json").
 		WithJSON(checkPermissionRequestBody).
 		Expect().

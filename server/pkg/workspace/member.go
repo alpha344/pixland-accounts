@@ -7,8 +7,8 @@ import (
 	"sync"
 
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
-	"github.com/reearth/reearthx/i18n"
-	"github.com/reearth/reearthx/rerror"
+	"github.com/alpha344/pixlandx/i18n"
+	"github.com/alpha344/pixlandx/rerror"
 	"github.com/samber/lo"
 )
 

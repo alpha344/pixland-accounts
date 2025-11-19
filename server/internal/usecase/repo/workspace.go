@@ -5,7 +5,7 @@ import (
 
 	"github.com/alpha344/pixland-accounts/server/pkg/user"
 	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/usecasex"
+	"github.com/alpha344/pixlandx/usecasex"
 )
 
 type Workspace interface {

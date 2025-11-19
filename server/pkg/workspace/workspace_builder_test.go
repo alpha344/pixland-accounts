@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	accountsid "github.com/alpha344/pixland-accounts/server/pkg/id"
-	"github.com/reearth/reearthx/idx"
+	"github.com/alpha344/pixlandx/idx"
 	"github.com/stretchr/testify/assert"
 )
 

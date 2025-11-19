@@ -7,11 +7,11 @@ import (
 	"os"
 	"strings"
 
+	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
+	"github.com/alpha344/pixlandx/appx"
+	"github.com/alpha344/pixlandx/log"
 	"github.com/joho/godotenv"
 	"github.com/kelseyhightower/envconfig"
-	"github.com/alpha344/pixland-accounts/server/pkg/workspace"
-	"github.com/reearth/reearthx/appx"
-	"github.com/reearth/reearthx/log"
 )
 
 const configPrefix = "pixland"
@@ -40,9 +40,9 @@ type Config struct {
 
 	SignupSecret   string `envconfig:"PIXLAND_ACCOUNTS_SIGNUP_SECRET"`
 	HostWeb        string
-	Reearth_API    string
-	Reearth_Web    string
-	Reearth_GCS    string
+	Pixland_API    string
+	Pixland_Web    string
+	Pixland_GCS    string
 	Published_Host string
 
 	// cerbos

@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/reearth/reearthx/asset/domain/file"
+	"github.com/alpha344/pixlandx/asset/domain/file"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
