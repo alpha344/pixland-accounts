@@ -1,0 +1,30 @@
+services:
+  pixland-cerbos:
+    image: cerbos/cerbos:0.40.0
+    command: server --config=/policies/.cerbos.yaml
+    ports:
+      - 3593:3593
+    volumes:
+      - ./server/e2e/testdata/policies:/policies
+    networks:
+      - pixland
+
+  pixland-accounts-dev:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+    env_file:
+      - ./server/.env.docker
+    ports:
+      - 8090:8090
+    depends_on:
+      - pixland-cerbos
+    volumes:
+      - ./server:/pixland-accounts  # Mount source code for hot reload
+      - /pixland-accounts/tmp       # Exclude tmp directory
+    networks:
+      - pixland
+
+networks:
+  pixland:
+    external: true

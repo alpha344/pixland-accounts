@@ -1,0 +1,8 @@
+services:
+  reearth-cerbos:
+    image: cerbos/cerbos:0.40.0
+    command: server --config=/policies/.cerbos.yaml
+    ports:
+      - 3593:3593
+    volumes:
+      - ./server/e2e/testdata/policies:/policies

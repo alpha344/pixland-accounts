@@ -1,0 +1,27 @@
+//go:generate go run github.com/99designs/gqlgen
+
+package gql
+
+import (
+	"errors"
+
+	"github.com/pixair-technologies/pixland-accounts/server/internal/usecase/gateway"
+)
+
+// THIS CODE IS A STARTING POINT ONLY. IT WILL NOT BE UPDATED WITH SCHEMA CHANGES.
+
+var ErrNotImplemented = errors.New("not impleneted yet")
+var ErrUnauthorized = errors.New("unauthorized")
+
+type Resolver struct {
+	Storage gateway.Storage
+}
+
+func NewResolver(storage gateway.Storage) ResolverRoot {
+	return &Resolver{
+		Storage: storage,
+	}
+}
+
+
+

@@ -1,0 +1,123 @@
+type User implements Node {
+  id: ID!
+  name: String!
+  email: String!
+  host: String
+  workspace: ID!
+  auths: [String!]!
+  metadata: UserMetadata!
+}
+
+type Me {
+  id: ID!
+  name: String!
+  alias: String!
+  email: String!
+  metadata: UserMetadata!
+  host: String
+  myWorkspaceId: ID!
+  auths: [String!]!
+  myWorkspace: Workspace!
+}
+
+type UserMetadata {
+  description: String!
+  website: String!
+  photoURL: String!
+  lang: Lang!
+  theme: Theme!
+}
+
+input SignupInput {
+  id: ID
+  workspaceID: ID
+  name: String!
+  email: String!
+  password: String!
+  secret: String
+  lang: Lang
+  theme: Theme
+  mockAuth: Boolean
+}
+
+input SignupOIDCInput {
+  id: ID
+  name: String
+  email: String
+  sub: String
+  lang: Lang
+  workspaceId: ID
+  secret: String
+}
+
+input FindOrCreateInput {
+  sub: String!
+  iss: String!
+  token: String!
+}
+
+input VerifyUserInput {
+  code: String!
+}
+
+input CreateVerificationInput {
+  email: String!
+}
+
+input StartPasswordResetInput {
+  email: String!
+}
+
+input PasswordResetInput {
+  password: String!
+  token: String!
+}
+
+input UpdateMeInput {
+  name: String
+  email: String
+  lang: Lang
+  theme: Theme
+  password: String
+  passwordConfirmation: String
+}
+
+input RemoveMyAuthInput {
+  auth: String!
+}
+
+input DeleteMeInput {
+  userId: ID!
+}
+
+extend type Query {
+  me: Me
+  userByNameOrEmail(nameOrEmail: String!): User
+  searchUser(keyword: String!): [User!]!
+  findUsersByIDs(ids: [ID!]!): [User!]!
+}
+
+type UserPayload {
+  user: User!
+}
+
+type UpdateMePayload {
+  me: Me!
+}
+
+type DeleteMePayload {
+  userId: ID!
+}
+
+extend type Mutation {
+  updateMe(input: UpdateMeInput!): UpdateMePayload
+  removeMyAuth(input: RemoveMyAuthInput!): UpdateMePayload
+  deleteMe(input: DeleteMeInput!): DeleteMePayload
+  signup(input: SignupInput!): UserPayload
+  signupOIDC(input: SignupOIDCInput!): UserPayload
+  verifyUser(input: VerifyUserInput!): UserPayload
+  findOrCreate(input: FindOrCreateInput!): UserPayload
+  createVerification(input: CreateVerificationInput!): Boolean
+  startPasswordReset(input: StartPasswordResetInput!): Boolean
+  passwordReset(input: PasswordResetInput!): Boolean
+}

@@ -1,0 +1,66 @@
+default: help
+
+help:
+	@echo "Usage:"
+	@echo "  make <target>"
+	@echo ""
+	@echo "Targets:"
+	@echo "  dev-install       Install tools for make dev - behavior not confirmed in windows."
+	@echo "  dev               Run the application with hot reloading"
+	@echo "  run               Run pixland-cerbos and pixland-accounts via docker-compose with hot reload"
+	@echo "  down              Stop and remove containers started by make run"
+	@echo "  run-app           Run the application"
+	@echo "  run-cerbos        Run the Cerbos server"
+	@echo "  run-migration     Run database migrations"
+	@echo "  gql               Generate GraphQL code include dataloader"
+	@echo "  generate          Run go generate"
+
+TARGET_TEST :=./...
+PIXLAND_ACCOUNTS_DB := mongodb://localhost
+test:
+	PIXLAND_ACCOUNTS_DB=${PIXLAND_ACCOUNTS_DB} go test ./... -run ${TARGET_TEST}
+
+DOCKER_COMPOSE := docker compose -f ../docker-compose.yml
+DOCKER_COMPOSE_DEV := docker compose -f ../docker-compose.dev.yml
+
+AIR_BIN := $(shell which air)
+MOCKGEN_BIN := $(shell which mockgen)
+dev-install:
+ifndef AIR_BIN
+	@echo "reflex is not installed. Installing..."
+	@go install github.com/air-verse/air@v1.61.5
+else
+	@echo "air is already installed."
+endif
+ifndef MOCKGEN_BIN
+	@echo "mockgen is not installed. Installing..."
+	@go install go.uber.org/mock/mockgen@v0.5.0
+else
+	@echo "mockgen is already installed."
+endif
+
+dev: dev-install
+	air
+
+run-app:
+	go run ./cmd/pixland-accounts
+
+run:
+	${DOCKER_COMPOSE_DEV} up pixland-accounts-dev
+
+down:
+	${DOCKER_COMPOSE_DEV} down
+
+run-cerbos:
+	${DOCKER_COMPOSE} up -d pixland-cerbos
+
+generate: dev-install
+	go generate ./...
+
+gql:
+	go generate ./internal/adapter/gql
+
+run-migration:
+	RUN_MIGRATION=true go run ./cmd/pixland-accounts
+
+.PHONY: dev-install dev run down run-app run-cerbos run-migration gql
