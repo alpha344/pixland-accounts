@@ -1,4 +1,4 @@
-services:
+﻿services:
   pixland-cerbos:
     image: cerbos/cerbos:0.40.0
     command: server --config=/policies/.cerbos.yaml
