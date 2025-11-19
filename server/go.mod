@@ -1,6 +1,6 @@
 module github.com/alpha344/pixland-accounts/server
 
-go 1.24.2
+go 1.25.2
 
 require (
 	cloud.google.com/go/storage v1.56.1
