@@ -1,8 +1,8 @@
 # PixLand Accounts
 
-[![GitHub stars](https://img.shields.io/github/stars/pixair-technologies/pixland-accounts?style=social)](https://github.com/pixair-technologies/pixland-accounts/stargazers)
-[![GitHub issues](https://img.shields.io/github/stars/pixair-technologies/pixland-accounts)](https://github.com/pixair-technologies/pixland-accounts/issues)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/pixair-technologies/pixland-accounts/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/alpha344/pixland-accounts?style=social)](https://github.com/alpha344/pixland-accounts/stargazers)
+[![GitHub issues](https://img.shields.io/github/stars/alpha344/pixland-accounts)](https://github.com/alpha344/pixland-accounts/issues)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/alpha344/pixland-accounts/blob/main/LICENSE)
 
 Centralized account management and authorization service for PixLand's microservice architecture. This service complements the authentication functionality across PixLand microservices by providing unified user, workspace, role management and permission evaluation.
 
@@ -204,18 +204,18 @@ For detailed architecture documentation, see [server/CLAUDE.md](server/CLAUDE.md
 ## Contact
 
 - Website: [https://pixland.io](https://pixland.io)
-- GitHub Issues: [https://github.com/pixair-technologies/pixland-accounts/issues](https://github.com/pixair-technologies/pixland-accounts/issues)
+- GitHub Issues: [https://github.com/alpha344/pixland-accounts/issues](https://github.com/alpha344/pixland-accounts/issues)
 
 ---
 
 # pixland-accounts 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpixair-technologies%2Fpixland-accounts.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpixair-technologies%2Fpixland-accounts?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falpha344%2Fpixland-accounts.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Falpha344%2Fpixland-accounts?ref=badge_shield)
 
 
 - Account management
 
 
 ## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fpixair-technologies%2Fpixland-accounts.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fpixair-technologies%2Fpixland-accounts?ref=badge_large)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Falpha344%2Fpixland-accounts.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Falpha344%2Fpixland-accounts?ref=badge_large)
 
 Copyright © 2025 PixAir Technologies Contributors
