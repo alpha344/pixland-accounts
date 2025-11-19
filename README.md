@@ -3,6 +3,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/alpha344/pixland-accounts?style=social)](https://github.com/alpha344/pixland-accounts/stargazers)
 [![GitHub issues](https://img.shields.io/github/stars/alpha344/pixland-accounts)](https://github.com/alpha344/pixland-accounts/issues)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/alpha344/pixland-accounts/blob/main/LICENSE)
+[![Go Reference](https://pkg.go.dev/badge/github.com/alpha344/pixland-accounts/server.svg)](https://pkg.go.dev/github.com/alpha344/pixland-accounts/server)
+[![Go Report Card](https://goreportcard.com/badge/github.com/alpha344/pixland-accounts)](https://goreportcard.com/report/github.com/alpha344/pixland-accounts)
 
 Centralized account management and authorization service for PixLand's microservice architecture. This service complements the authentication functionality across PixLand microservices by providing unified user, workspace, role management and permission evaluation.
 
@@ -34,6 +36,20 @@ PixLand Accounts follows Domain-Driven Design (DDD) principles with clear layer 
 - [Cerbos](https://cerbos.dev/) - Authorization engine
 - [Auth0](https://auth0.com/) - Authentication provider
 - [Docker](https://www.docker.com/) - Containerization
+
+## Versioning
+
+This project uses branch-based versioning:
+
+- **`main`** - Latest stable release
+- **`develop`** - Ongoing development
+- **`v1.0`** - Version 1.0 stable branch
+- **Tags** - Semantic version releases (e.g., `v1.0.0`)
+
+To use a specific version in your Go project:
+```bash
+go get github.com/alpha344/pixland-accounts/server@v1.0.0
+```
 
 ## GraphQL API
 
